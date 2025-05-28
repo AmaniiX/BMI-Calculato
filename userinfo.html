@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <link rel="stylesheet" href="bmi.css">  <!-- Link to external CSS file for page styling -->
+</head>
+<body>
+
+        <!-- Header section of the page -->
+    <div class="header">
+        <h1>Welcome to the Health & BMI Web App</h1>
+    </div>
+
+     <!-- Main section containing the user information form -->
+    <div class="main">
+        
+        <form>
+            <h2>User Information</h2>
+
+            <label for="name">Name:</label><br>            
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label><br>            
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="age">Age:</label><br>            
+            <input type="number" id="age" name="age"><br><br>
+
+            <input type="button" value="Submit Info" onclick="Information()">
+        </form>
+        <br>
+
+      <!-- Section to display the result after submitting the information -->
+<div id="result"></div>
+
+
+ <!-- Navigation section with links to other pages -->
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Back to Home</a></li>
+            <li><a href="userinfo.html">My Information</a></li>
+            <li><a href="bmi.html">BMI Calculator</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // Function to display the user's entered information
+        function Information() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var age = document.getElementById("age").value;
+
+            // Check if all fields are filled
+            if (name === '' || email === '' || age === '') {
+                alert('Please fill all fields'); // Alert if any field is empty
+            } else {
+                // Display the entered information in the result section
+                document.getElementById("result").innerHTML =
+                    `<p>Welcome <strong>${name}</strong> to the website!</p>
+                     <p>Your Email: ${email}</p>
+                     <p>Your Age: ${age}</p>`;
+            }
+        }
+    </script>
+
+
+</body>
+</html>

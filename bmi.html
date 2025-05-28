@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="bmi.css">
+    <script src="bmi.js" defer></script>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Welcome to the Health & BMI Web App</h1>
+    </div>
+
+
+     <!-- Main content section where the BMI calculator is located -->
+    <div class="main">
+       
+
+          <!-- BMI form for inputting weight and height -->
+        <form>
+            <h2>BMI Calculator</h2>
+            <label for="Weight">Weight (Kg):</label><br>            
+            <input type="number" id="Weight" placeholder="e.g. 70"><br><br>
+
+            <label for="Height">Height (m):</label><br>            
+            <input type="number" id="Height" placeholder="e.g. 1.75"><br><br>
+
+            <input type="button" value="Calculate BMI" onclick="calculateBMI()">
+            <input type="button" value="Reset" onclick="resetForm()">
+            
+            <!-- Section where the result will be displayed after BMI calculation -->
+          <h3 id="result" style="margin-top: 20px;"></h3>
+        </form>
+
+          
+    </div>
+
+
+    <!-- Navigation section with links to other pages -->
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Back to Home</a></li>
+            <li><a href="userinfo.html">My Information</a></li>
+            <li><a href="bmi.html">BMI Calculator</a></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>
